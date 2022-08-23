@@ -9,7 +9,8 @@ body {
 }
 
 main {
-  width: 380px;
+  position: relative;
+  width: 300px;
   border-radius: 15px;
   background-color: hsl(216, 50%, 16%);
   display: flex;
@@ -19,8 +20,34 @@ main {
 
 .container {
   width: 85%;
-  margin: 28px auto;
+  margin: 23px auto;
   font-family: "Outfit", sans-serif;
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 117%;
+  top: -20px;
+  left: -43.5px;
+  background-color: hsla(217, 53%, 10.85%);
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 106%;
+  top: 5px;
+  left: -17px;
+  background-color: hsla(217, 53%, 10.109%);
+  border-radius: 50px;
+  z-index: -1;
+  filter: blur(1px);
 }
 
 .imageCon {
@@ -54,18 +81,18 @@ main {
   transform: translate(-50%, -50%);
 }
 
-h2 {
+h3 {
   color: hsl(0, 0%, 100%);
 }
 
-h2:hover {
+h3:hover {
   cursor: pointer;
   color: hsl(178, 100%, 50%);
 }
 
 p {
   color: hsla(0, 0%, 100%, 0.548);
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #content {
@@ -108,7 +135,7 @@ p {
 }
 
 .fImage {
-  width: 35px;
+  width: 30px;
   margin-right: 15px;
   border-radius: 20px;
   border: 1px solid white;
